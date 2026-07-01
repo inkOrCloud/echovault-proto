@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package echo_vault.playlist.v1;
 
-option go_package = "github.com/ink/echovault-server/api/grpc/generated/echo_vault/playlist/v1;playlistpb";
+option go_package = "github.com/inkOrCloud/EchoVault/echovault-server/api/grpc/generated/echo_vault/playlist/v1;playlistpb";
 
 import "google/protobuf/timestamp.proto";
 import "echo_vault/common/v1/types.proto";
