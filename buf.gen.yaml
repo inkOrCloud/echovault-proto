@@ -1,8 +1,15 @@
 version: v2
 plugins:
+  # Go DTO
   - remote: buf.build/protocolbuffers/go
     out: ../echovault-server/api/grpc/generated
     opt: paths=source_relative
+  # Go gRPC stub
   - remote: buf.build/grpc/go
     out: ../echovault-server/api/grpc/generated
     opt: paths=source_relative
+  # Dart DTO + gRPC stub（v20.0.1 兼容 protobuf 4.x + SongServiceClient）
+  - remote: buf.build/protocolbuffers/dart:v20.0.1
+    out: ../echo_vault_app/lib/models/generated
+    opt:
+      - grpc
